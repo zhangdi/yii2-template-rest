@@ -2,25 +2,15 @@
 
 $config = [
     'id' => 'web',
-    'controllerNamespace' => 'App\Controllers',
-    'viewPath' => SRC_PATH . '/views',
+    'controllerNamespace' => 'App\Api\Controllers',
     'bootstrap' => [
         'log',
-        [
-            'class' => 'App\Bootstrap\WebModuleAutoloader',
-            'modulePaths' => [
-                '@App/Modules'
-            ]
-        ]
     ],
+    'defaultRoute' => 'default/index',
     'components' => [
         'request' => [
             'class' => 'yii\web\Request',
             'cookieValidationKey' => 'please-replace',
-        ],
-        'errorHandler' => [
-            'class' => 'yii\web\ErrorHandler',
-            'errorAction' => 'site/error',
         ],
         'user' => [
             'identityClass' => 'App\Models\User'

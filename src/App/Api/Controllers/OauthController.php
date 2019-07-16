@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Modules\Api\Controllers;
+namespace App\Api\Controllers;
 
 
-use App\Modules\Api\Controller;
+use App\Controller;
 use App\Modules\Api\Models\Resp;
 
 class OauthController extends Controller

@@ -1,10 +1,9 @@
 <?php
 
 
-namespace App\Modules\Api\Controllers;
+namespace App\Api\Controllers;
 
-
-use App\Modules\Api\Controller;
+use App\Controller;
 
 class DefaultController extends Controller
 {

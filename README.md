@@ -1,2 +1,2 @@
-Basic Template For Yii2
+REST API Template For Yii2
 ===============================

@@ -6,48 +6,19 @@ namespace App;
 
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use yii\web\Response;
 
-class Controller extends \yii\web\Controller
+class Controller extends \yii\rest\Controller
 {
-    /**
-     * @return array
-     */
-    public function verbs()
-    {
-        return [];
-    }
-
-    /**
-     * @return array
-     */
-    public function accessRules()
-    {
-        return [];
-    }
-
-    /**
-     * @return array
-     */
     public function behaviors()
     {
         $behaviors = parent::behaviors();
 
-        // Access Control
-        $accessRules = $this->accessRules();
-        if (count($accessRules) > 0) {
-            $behaviors['access'] = [
-                'class' => AccessControl::class,
-                'rules' => $this->accessRules(),
-
-            ];
-        }
-
-        // Verbs
-        $behaviors['verbs'] = [
-            'class' => VerbFilter::class,
-            'actions' => $this->verbs(),
+        $behaviors['contentNegotiator']['formats'] = [
+            'application/json' => Response::FORMAT_JSON,
         ];
 
         return $behaviors;
     }
+
 }
