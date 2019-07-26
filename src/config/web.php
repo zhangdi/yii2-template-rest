@@ -2,7 +2,7 @@
 
 $config = [
     'id' => 'web',
-    'controllerNamespace' => 'App\Api\Controllers',
+    'controllerNamespace' => 'App\Controllers',
     'bootstrap' => [
         'log',
     ],
